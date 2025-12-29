@@ -19,28 +19,24 @@ export default function HeroParallax() {
 
   const FINAL_Y = "-30%"; // tetap sweet spot untuk layer yang bergerak
 
-  // Layer mid 1
-  const opacityL1 = useTransform(smoothProgress, [0.03, 0.38], [0, 1]);
-  const yL1 = useTransform(smoothProgress, [0.03, 1], ["90%", FINAL_Y]);
+  const opacityL1 = useTransform(smoothProgress, [0.01, 0.35], [0, 1]);
+  const yL1 = useTransform(smoothProgress, [0.01, 0.75], ["90%", FINAL_Y]);
 
-  // Layer mid 2
-  const opacityL2 = useTransform(smoothProgress, [0.18, 0.5], [0, 1]);
-  const yL2 = useTransform(smoothProgress, [0.18, 1], ["78%", FINAL_Y]);
+  const opacityL2 = useTransform(smoothProgress, [0.1, 0.45], [0, 1]);
+  const yL2 = useTransform(smoothProgress, [0.1, 0.78], ["78%", FINAL_Y]);
 
-  // Layer mid 3
-  const opacityL3 = useTransform(smoothProgress, [0.32, 0.65], [0, 1]);
-  const yL3 = useTransform(smoothProgress, [0.32, 1], ["68%", FINAL_Y]);
+  const opacityL3 = useTransform(smoothProgress, [0.2, 0.55], [0, 1]);
+  const yL3 = useTransform(smoothProgress, [0.2, 0.8], ["68%", FINAL_Y]);
 
-  // Foreground
-  const opacityFg = useTransform(smoothProgress, [0.48, 0.88], [0, 1]);
-  const yFg = useTransform(smoothProgress, [0.48, 1], ["50%", FINAL_Y]);
-  const scaleFg = useTransform(smoothProgress, [0.48, 1], [1.04, 1]);
+  const opacityFg = useTransform(smoothProgress, [0.35, 0.7], [0, 1]);
+  const yFg = useTransform(smoothProgress, [0.35, 0.8], ["50%", FINAL_Y]);
+  const scaleFg = useTransform(smoothProgress, [0.35, 0.8], [1.06, 1]);
 
   return (
     <section
       ref={container}
       className="relative w-full"
-      style={{ height: "clamp(500vh, 600vh, 800vh)" }}
+      style={{ height: "clamp(200vh, 280vh, 400vh)" }}
     >
       <div className="sticky top-0 h-screen overflow-hidden">
         {/* Fallback gradient warm orange-yellow */}
@@ -51,25 +47,42 @@ export default function HeroParallax() {
 
         {/* Mid Layer 1 – mulai gerak */}
         <motion.div
-          style={{ y: yL1, opacity: opacityL1 }}
+          style={{
+            y: yL1,
+            opacity: opacityL1,
+            willChange: "transform, opacity",
+          }}
           className="absolute inset-0 bg-[url('/frame/hero/6.png')] bg-cover md:bg-center bg-top z-20 [image-rendering:pixelated]"
         />
 
         {/* Mid Layer 2 */}
         <motion.div
-          style={{ y: yL2, opacity: opacityL2 }}
+          style={{
+            y: yL2,
+            opacity: opacityL2,
+            willChange: "transform, opacity",
+          }}
           className="absolute inset-0 bg-[url('/frame/hero/7.png')] bg-cover md:bg-center bg-top z-30 [image-rendering:pixelated]"
         />
 
         {/* Mid Layer 3 */}
         <motion.div
-          style={{ y: yL3, opacity: opacityL3 }}
+          style={{
+            y: yL3,
+            opacity: opacityL3,
+            willChange: "transform, opacity",
+          }}
           className="absolute inset-0 bg-[url('/frame/hero/8.png')] bg-cover md:bg-center bg-top z-40 [image-rendering:pixelated]"
         />
 
         {/* Foreground */}
         <motion.div
-          style={{ y: yFg, opacity: opacityFg, scale: scaleFg }}
+          style={{
+            y: yFg,
+            opacity: opacityFg,
+            scale: scaleFg,
+            willChange: "transform, opacity",
+          }}
           className="absolute inset-0 bg-[url('/frame/hero/9.png')] bg-cover md:bg-center bg-bottom z-50 [image-rendering:pixelated]"
         />
 
@@ -79,7 +92,7 @@ export default function HeroParallax() {
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 1.4, ease: "easeOut" }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold drop-shadow-[0_6px_16px_rgba(0,0,0,0.9)] tracking-tight"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold drop-shadow-lg tracking-tight"
           >
             JoyJourney
           </motion.h1>
