@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "JoyJourney",
     images: [
       {
-        url: "/frame.hero/10.png", // buat gambar 1200×630 px: gradient hangat + path/journey + senyum
+        url: "/frame/hero/10.png", // buat gambar 1200×630 px: gradient hangat + path/journey + senyum
         width: 1200,
         height: 630,
         alt: "JoyJourney - Your Daily Happiness Journey",

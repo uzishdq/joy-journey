@@ -9,12 +9,33 @@ Built with love, smooth animations, and a nostalgic 8-bit vibe that makes tracki
 
 ## ✨ Features
 
-- Daily mood logging (1–10 scale + emotion tags)
-- Science-backed PERMA analysis (Positive Emotion · Engagement · Relationships · Meaning · Accomplishment)
-- Stunning retro 8-bit UI with smooth Framer Motion animations
-- Beautiful trend charts & personal insights
-- Fully responsive
-- Secure login & private data
+- **Daily affect check-ins (PANAS-based)**  
+  Log daily emotional states using a scientifically grounded Positive and Negative Affect scale (Likert 1–5).
+
+- **Affective Balance Score**  
+  Automatically calculates daily well-being by subtracting Negative Affect from Positive Affect.
+
+- **Emotion-based reflection**  
+  Track core emotions aligned with psychological research:  
+  _Joy, Gratitude, Calm, Energy · Stress, Anxiety, Sadness, Anger._
+
+- **Clear Happiness Index (0–100)**  
+  Normalized well-being score for intuitive understanding and comparison over time.
+
+- **Emotional trends & insights**  
+  Visualize daily, weekly, and monthly affect patterns to support self-reflection and awareness.
+
+- **Personal insights (non-diagnostic)**  
+  Evidence-informed interpretations designed for reflection — not therapy or diagnosis.
+
+- **Retro 8-bit UI experience**  
+  Nostalgic pixel-inspired design enhanced with smooth Framer Motion animations.
+
+- **Responsive across devices**  
+  Optimized for mobile, tablet, and desktop experiences.
+
+- **Secure authentication & private data**  
+  User data is protected with secure login and privacy-first design.
 
 ## 🛠️ Tech Stack (Modern & Fun!)
 
