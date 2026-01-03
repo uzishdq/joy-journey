@@ -44,7 +44,7 @@ export default function RegisterForm() {
       <CardHeader>
         <CardTitle className="text-2xl">Register</CardTitle>
         <CardDescription className="text-xs">
-          Enter your email below to login to your account
+          Enter your email below to register
         </CardDescription>
       </CardHeader>
       <CardContent>
