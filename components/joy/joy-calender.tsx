@@ -137,9 +137,9 @@ const JoyCalendar = () => {
 
         {/* Calendar Grid */}
         <div className="grid grid-cols-7 gap-1.5">
-          {days.map((date, index) => (
+          {days.map((date) => (
             <JoyCell
-              key={index}
+              key={date.getTime()}
               date={date}
               value={getEntryValue(date)}
               isCurrentMonth={date.getMonth() === month}
