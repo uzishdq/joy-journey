@@ -1,4 +1,4 @@
-import { EMOJIS } from "@/lib/utils";
+import { cn, EMOJIS, JOY_COLORS } from "@/lib/utils";
 
 const JoyLegend = () => {
   return (
@@ -13,15 +13,17 @@ const JoyLegend = () => {
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((level) => (
           <div
             key={level}
-            className="w-6 h-6 rounded-md flex items-center justify-center text-xs"
-            style={{ backgroundColor: `hsl(var(--joy-${level}))` }}
+            className={cn(
+              "w-10 h-10 rounded-md flex items-center justify-center text-xs",
+              JOY_COLORS[level]
+            )}
             title={`${level}: ${EMOJIS[level]}`}
           >
-            <span className="text-[10px]">{EMOJIS[level]}</span>
+            <span className="text-lg">{EMOJIS[level]}</span>
           </div>
         ))}
       </div>
-      <div className="flex justify-between text-[10px] text-muted-foreground mt-1 px-1 max-w-[200px] mx-auto">
+      <div className="flex justify-between text-[10px] text-muted-foreground mt-1 px-1 max-w-50 mx-auto">
         <span>Sad</span>
         <span>Happy</span>
       </div>

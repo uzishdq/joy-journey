@@ -24,16 +24,29 @@ export const EMOJIS: Record<number, string> = {
 };
 
 export const JOY_COLORS: Record<number, string> = {
-  1: "bg-joy-1",
-  2: "bg-joy-2",
-  3: "bg-joy-3",
-  4: "bg-joy-4",
-  5: "bg-joy-5",
-  6: "bg-joy-6",
-  7: "bg-joy-7",
-  8: "bg-joy-8",
-  9: "bg-joy-9",
-  10: "bg-joy-10",
+  1: "bg-slate-500", // very sad – berat, mati rasa
+  2: "bg-slate-400", // sad
+  3: "bg-blue-400", // low mood, dingin
+  4: "bg-sky-400", // mulai ringan
+  5: "bg-teal-400", // netral / stabil
+  6: "bg-lime-400", // mulai positif
+  7: "bg-yellow-400", // happy
+  8: "bg-amber-400", // joyful
+  9: "bg-orange-400", // excited
+  10: "bg-rose-500", // very happy / euphoric
+};
+
+export const JOY_COLORS_HOVER: Record<number, string> = {
+  1: "hover:bg-slate-600",
+  2: "hover:bg-slate-500",
+  3: "hover:bg-blue-500",
+  4: "hover:bg-sky-500",
+  5: "hover:bg-teal-500",
+  6: "hover:bg-lime-500",
+  7: "hover:bg-yellow-500",
+  8: "hover:bg-amber-500",
+  9: "hover:bg-orange-500",
+  10: "hover:bg-rose-600",
 };
 
 export const formatDateKey = (date: Date): string => {

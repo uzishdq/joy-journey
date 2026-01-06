@@ -1,6 +1,7 @@
 "use client";
 
-import { cn, EMOJIS } from "@/lib/utils";
+import { cn, EMOJIS, JOY_COLORS, JOY_COLORS_HOVER } from "@/lib/utils";
+import { Button } from "../ui/button";
 
 interface JoySliderProps {
   value: number;
@@ -21,22 +22,21 @@ const JoySlider = ({ value, onChange }: JoySliderProps) => {
 
       <div className="flex gap-1.5 justify-center flex-wrap">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((level) => (
-          <button
+          <Button
             key={level}
             onClick={() => onChange(level)}
             className={cn(
-              "w-10 h-10 rounded-lg text-lg transition-all duration-200",
-              "hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary",
+              "w-10 h-10 rounded-md text-lg transition-all duration-200",
+              "hover:scale-110 focus:outline-none",
+              JOY_COLORS[level],
+              JOY_COLORS_HOVER[level],
               value === level
-                ? "ring-2 ring-primary shadow-glow scale-110"
+                ? "ring-2 ring-primary scale-110"
                 : "opacity-60 hover:opacity-100"
             )}
-            style={{
-              backgroundColor: `hsl(var(--joy-${level}))`,
-            }}
           >
             {EMOJIS[level]}
-          </button>
+          </Button>
         ))}
       </div>
     </div>

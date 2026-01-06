@@ -154,7 +154,7 @@ const JoyCalendar = () => {
           <div className="mt-5 pt-4 border-t border-border text-center">
             <p className="text-sm text-muted-foreground">
               Average Joy:{" "}
-              <span className="font-bold text-primary">{averageJoy}</span>/10
+              <span className="font-bold text-primary">{averageJoy}</span>/10{" "}
               <span className="ml-2">({entries.length} days tracked)</span>
             </p>
           </div>
