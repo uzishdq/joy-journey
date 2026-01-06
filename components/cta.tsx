@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Cta() {
   return (
-    <section className="relative h-screen -mt-1 bg-linear-to-t from-amber-600 via-yellow-400 to-orange-300 pt-20 pb-32">
+    <section className="relative h-screen -mt-1 pt-20 pb-32">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

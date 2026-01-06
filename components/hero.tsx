@@ -40,7 +40,7 @@ export default function HeroParallax() {
     >
       <div className="sticky top-0 h-screen overflow-hidden">
         {/* Fallback gradient warm orange-yellow */}
-        <div className="absolute inset-0 bg-linear-to-b from-orange-900 via-amber-800 to-yellow-700 opacity-90 z-0" />
+        <div className="absolute inset-0opacity-90 z-0" />
 
         {/* Layer Background – FIXED, tidak bergerak */}
         <div className="absolute inset-0 bg-[url('/frame/hero/5.png')] bg-cover bg-center z-10 [image-rendering:pixelated]" />

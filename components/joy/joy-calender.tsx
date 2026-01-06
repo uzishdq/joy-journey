@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/8bit/button";
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
+  DialogFooter,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/8bit/dialog";
@@ -81,7 +83,7 @@ const JoyCalendar = () => {
       : null;
 
   return (
-    <div className="w-full max-w-4xl mx-auto">
+    <div className="relative z-10 w-full max-w-4xl mx-auto">
       {/* Header */}
       <div className="text-center mb-6">
         <div className="inline-flex items-center gap-2 mb-2">
@@ -97,7 +99,7 @@ const JoyCalendar = () => {
       </div>
 
       {/* Calendar Card */}
-      <div className="bg-card rounded-2xl p-5 shadow-soft animate-slide-up">
+      <div className="rounded-2xl p-5">
         {/* Month Navigation */}
         <div className="flex items-center justify-between mb-5">
           <Button
@@ -166,32 +168,39 @@ const JoyCalendar = () => {
 
       {/* Edit Dialog */}
       <Dialog open={!!selectedDate} onOpenChange={() => setSelectedDate(null)}>
-        <DialogContent className="sm:max-w-sm">
-          <DialogHeader>
-            <DialogTitle className="text-center font-bold text-xl">
+        <DialogContent className="sm:max-w-sm max-w-[95vw] p-6">
+          <DialogHeader className="pb-6">
+            <DialogTitle className="text-center text-xl sm:text-2xl font-bold tracking-tight">
               {selectedDate && format(selectedDate, "EEEE, MMMM d")}
             </DialogTitle>
+            {selectedDate && (
+              <DialogDescription className="text-center text-muted-foreground text-sm mt-1">
+                How are you feeling today?
+              </DialogDescription>
+            )}
           </DialogHeader>
 
           <div className="py-4">
             <JoySlider value={tempValue} onChange={setTempValue} />
           </div>
 
-          <div className="flex gap-2">
+          <DialogFooter className="sm:justify-between gap-3 pt-6 border-t">
             <Button
               variant="outline"
               onClick={handleClear}
-              className="flex-1 rounded-xl"
+              className="flex-1 sm:flex-none sm:min-w-25"
             >
               Clear
             </Button>
+
             <Button
               onClick={handleSave}
-              className="flex-1 rounded-xl bg-primary hover:bg-primary/90"
+              className="flex-1 sm:flex-none sm:min-w-25"
+              disabled={!tempValue} // optional: disable kalau belum pilih
             >
               Save
             </Button>
-          </div>
+          </DialogFooter>
         </DialogContent>
       </Dialog>
     </div>

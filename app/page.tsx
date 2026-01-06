@@ -3,7 +3,7 @@ import HeroParallax from "@/components/hero";
 
 export default function Home() {
   return (
-    <main>
+    <main className="gradient-sunset">
       <HeroParallax />
       <Cta />
     </main>

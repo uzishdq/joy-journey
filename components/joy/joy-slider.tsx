@@ -10,7 +10,7 @@ interface JoySliderProps {
 
 const JoySlider = ({ value, onChange }: JoySliderProps) => {
   return (
-    <div className="space-y-4">
+    <div className="space-y-5">
       <div className="text-center">
         <span className="text-5xl animate-bounce-soft inline-block">
           {EMOJIS[value]}
@@ -20,13 +20,13 @@ const JoySlider = ({ value, onChange }: JoySliderProps) => {
         </p>
       </div>
 
-      <div className="flex gap-1.5 justify-center flex-wrap">
+      <div className="flex gap-2 justify-center flex-wrap">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((level) => (
           <Button
             key={level}
             onClick={() => onChange(level)}
             className={cn(
-              "w-10 h-10 rounded-md text-lg transition-all duration-200",
+              "w-10 h-10 rounded-sm text-lg transition-all duration-200",
               "hover:scale-110 focus:outline-none",
               JOY_COLORS[level],
               JOY_COLORS_HOVER[level],
