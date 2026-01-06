@@ -1,11 +1,11 @@
-import Cta from "@/components/cta";
+import JoyCtaSection from "@/components/cta";
 import HeroParallax from "@/components/hero";
 
 export default function Home() {
   return (
-    <main className="gradient-sunset">
+    <main className="min-h-screen">
       <HeroParallax />
-      <Cta />
+      <JoyCtaSection />
     </main>
   );
 }
