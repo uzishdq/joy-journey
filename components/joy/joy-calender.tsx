@@ -101,27 +101,27 @@ const JoyCalendar = () => {
       {/* Calendar Card */}
       <div className="rounded-2xl p-5">
         {/* Month Navigation */}
-        <div className="flex items-center justify-between mb-5">
+        <div className="flex items-center justify-between mb-4 sm:mb-5 md:mb-6">
           <Button
-            variant="ghost"
+            variant="secondary"
             size="icon"
             onClick={handlePrevMonth}
-            className="rounded-xl hover:bg-secondary"
+            className="p-2 sm:p-2.5 md:p-3"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ChevronLeft className="w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6" />
           </Button>
 
-          <h2 className="text-lg font-bold text-foreground">
+          <h2 className="text-base md:text-lg lg:text-xl font-semibold text-center text-foreground">
             {getMonthName(month)} {year}
           </h2>
 
           <Button
-            variant="ghost"
+            variant="secondary"
             size="icon"
             onClick={handleNextMonth}
-            className="rounded-xl hover:bg-secondary"
+            className="p-2 sm:p-2.5 md:p-3"
           >
-            <ChevronRight className="w-5 h-5" />
+            <ChevronRight className="w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6" />
           </Button>
         </div>
 
@@ -153,12 +153,12 @@ const JoyCalendar = () => {
 
         {/* Stats */}
         {averageJoy && (
-          <div className="mt-5 pt-4 border-t border-border text-center">
+          <div className="mt-5 pt-4 border-t border-border text-center space-y-2">
             <p className="text-sm text-muted-foreground">
               Average Joy:{" "}
-              <span className="font-bold text-primary">{averageJoy}</span>/10{" "}
-              <span className="ml-2">({entries.length} days tracked)</span>
+              <span className="font-bold text-primary">{averageJoy}</span>/10
             </p>
+            <p className="text-sm">({entries.length} days tracked)</p>
           </div>
         )}
       </div>
