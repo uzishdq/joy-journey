@@ -36,7 +36,7 @@ export default function LoginForm() {
 
   function onSubmit(values: z.infer<typeof loginSchema>) {
     console.log(values);
-    toast("Event has been created", "error");
+    toast("Event has been created", "success");
   }
 
   return (
@@ -74,6 +74,12 @@ export default function LoginForm() {
                     <Input type="password" {...field} />
                   </FormControl>
                   <FormMessage />
+                  <Link
+                    href={ROUTES.PUBLIC.INDEX}
+                    className="text-sm text-right underline-offset-4 hover:underline"
+                  >
+                    Forgot your password?
+                  </Link>
                 </FormItem>
               )}
             />
