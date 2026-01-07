@@ -1,26 +1,42 @@
 "use client";
 
-import React from "react";
-
 import { toast as sonnerToast } from "sonner";
 
 import "./styles/retro.css";
+import { cn } from "@/lib/utils";
 
-export function toast(toast: string) {
-  return sonnerToast.custom((id) => <Toast id={id} title={toast} />);
+type ToastType = "success" | "warning" | "error" | "info";
+
+const bgByType: Record<ToastType, string> = {
+  success: "bg-retro-green text-retro-paper",
+  warning: "bg-retro-yellow text-retro-ink",
+  error: "bg-retro-red text-retro-paper",
+  info: "bg-retro-blue text-retro-paper",
+};
+
+export function toast(toast: string, type: ToastType = "info") {
+  return sonnerToast.custom((id) => (
+    <Toast id={id} title={toast} type={type} />
+  ));
 }
 
 interface ToastProps {
   id: string | number;
   title: string;
+  type: ToastType;
 }
 
-function Toast(props: ToastProps) {
-  const { title } = props;
+function Toast(props: Readonly<ToastProps>) {
+  const { title, type } = props;
 
   return (
     <div className={`relative ${"retro"}`}>
-      <div className="flex rounded-lg bg-background shadow-lg ring-1 ring-black/5 w-full md:max-w-91 items-center p-4">
+      <div
+        className={cn(
+          "flex rounded-lg shadow-lg ring-1 ring-black/5 w-full md:max-w-91 items-center p-4",
+          bgByType[type]
+        )}
+      >
         <div className="flex flex-1 items-center">
           <div className="w-full">
             <p className="text-sm font-medium">{title}</p>

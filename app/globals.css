@@ -80,6 +80,14 @@
   --sidebar-border: oklch(0.928 0.006 264.531);
   --sidebar-ring: oklch(0.707 0.022 261.325);
 
+  --retro-green: #6b8e23; /* olive green */
+  --retro-yellow: #d4b15f; /* harvest gold */
+  --retro-red: #9b3a3a; /* barn red */
+  --retro-blue: #4f6d7a; /* dusty sky */
+
+  --retro-ink: #2b1d0e; /* dark brown text */
+  --retro-paper: #f4e9d8; /* parchment */
+
   /* Gradients */
   --gradient-joy: linear-gradient(
     135deg,
@@ -162,6 +170,26 @@
 
   .gradient-joy {
     background: var(--gradient-joy);
+  }
+
+  .bg-retro-green {
+    background-color: var(--retro-green);
+  }
+  .bg-retro-yellow {
+    background-color: var(--retro-yellow);
+  }
+  .bg-retro-red {
+    background-color: var(--retro-red);
+  }
+  .bg-retro-blue {
+    background-color: var(--retro-blue);
+  }
+
+  .text-retro-ink {
+    color: var(--retro-ink);
+  }
+  .text-retro-paper {
+    color: var(--retro-paper);
   }
 
   @keyframes float {

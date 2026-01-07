@@ -36,8 +36,9 @@ export default function LoginForm() {
 
   function onSubmit(values: z.infer<typeof loginSchema>) {
     console.log(values);
-    toast("Event has been created");
+    toast("Event has been created", "error");
   }
+
   return (
     <Card>
       <CardHeader>
