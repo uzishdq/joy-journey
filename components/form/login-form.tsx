@@ -23,6 +23,7 @@ import {
 } from "../ui/form";
 import Link from "next/link";
 import { ROUTES } from "@/lib/constant";
+import { toast } from "../ui/8bit/toast";
 
 export default function LoginForm() {
   const form = useForm<z.infer<typeof loginSchema>>({
@@ -35,6 +36,7 @@ export default function LoginForm() {
 
   function onSubmit(values: z.infer<typeof loginSchema>) {
     console.log(values);
+    toast("Event has been created");
   }
   return (
     <Card>

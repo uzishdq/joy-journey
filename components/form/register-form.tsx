@@ -23,6 +23,7 @@ import {
 } from "../ui/form";
 import Link from "next/link";
 import { ROUTES } from "@/lib/constant";
+import { toast } from "sonner";
 
 export default function RegisterForm() {
   const form = useForm<z.infer<typeof registerSchema>>({
@@ -37,6 +38,7 @@ export default function RegisterForm() {
 
   function onSubmit(values: z.infer<typeof registerSchema>) {
     console.log(values);
+    toast.success("Event has been created");
   }
 
   return (

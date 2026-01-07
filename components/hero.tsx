@@ -22,8 +22,8 @@ export default function HeroParallax() {
   // ── Semua useTransform di TOP-LEVEL (wajib!) ──
 
   // Layer 1
-  const opacityL1 = useTransform(smoothProgress, [0.0, 0.6], [0, 1]);
-  const yL1 = useTransform(smoothProgress, [0.0, 0.6], ["65%", FINAL_Y]);
+  const opacityL1 = useTransform(smoothProgress, [0, 0.6], [0, 1]);
+  const yL1 = useTransform(smoothProgress, [0, 0.6], ["65%", FINAL_Y]);
 
   // Layer 2
   const opacityL2 = useTransform(smoothProgress, [0.08, 0.65], [0, 1]);
@@ -97,7 +97,7 @@ export default function HeroParallax() {
         />
 
         {/* Text overlay */}
-        <div className="relative z-[60] h-full flex flex-col items-center justify-center text-white text-center px-5 sm:px-8 md:px-12">
+        <div className="relative z-60 h-full flex flex-col items-center justify-center text-white text-center px-5 sm:px-8 md:px-12">
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
