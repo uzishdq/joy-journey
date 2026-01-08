@@ -21,6 +21,7 @@ import {
 import JoyCell from "./joy-cell";
 import JoyLegend from "./joy-legend";
 import JoySlider from "./joy-slider";
+import { joyEntries } from "@/lib/constant";
 
 const WEEKDAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
@@ -29,7 +30,8 @@ const JoyCalendar = () => {
   const [currentDate, setCurrentDate] = useState(
     new Date(today.getFullYear(), today.getMonth(), 1)
   );
-  const [entries, setEntries] = useState<JoyEntry[]>([]);
+  // const [entries, setEntries] = useState<JoyEntry[]>([]);
+  const [entries, setEntries] = useState<JoyEntry[]>(joyEntries);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [tempValue, setTempValue] = useState(5);
 
