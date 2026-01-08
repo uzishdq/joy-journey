@@ -6,6 +6,9 @@ export const ROUTES = {
     LOGIN: "/login",
     REGISTER: "/register",
   },
+  PRIVATE: {
+    INDEX: "/journeys",
+  },
 };
 
 export const joyEntries: JoyEntry[] = [

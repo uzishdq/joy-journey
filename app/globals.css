@@ -88,6 +88,10 @@
   --retro-ink: #2b1d0e; /* dark brown text */
   --retro-paper: #f4e9d8; /* parchment */
 
+  --wood-bg: #c8a165;
+  --wood-dark: #8b5a2b;
+  --wood-shadow: #4b2e16;
+
   /* Gradients */
   --gradient-joy: linear-gradient(
     135deg,
@@ -192,61 +196,51 @@
     color: var(--retro-paper);
   }
 
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-12px);
-    }
+  /* ===== Panel ===== */
+  .retro-panel {
+    background-color: var(--wood-bg);
+    border: 2px solid var(--wood-dark);
+    box-shadow: 4px 4px 0 var(--wood-shadow);
+    image-rendering: pixelated;
+    animation: pop 0.12s steps(2) forwards;
   }
 
-  @keyframes float-slow {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-8px);
-    }
+  /* ===== Title ===== */
+  .retro-title {
+    font-weight: 700;
+    color: var(--retro-ink);
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 0 #fff;
   }
 
-  @keyframes sparkle {
-    0%,
-    100% {
-      transform: scale(1);
-      opacity: 0.6;
-    }
-    50% {
-      transform: scale(1.2);
-      opacity: 1;
-    }
+  /* ===== Button ===== */
+  .retro-button {
+    padding: 6px 12px;
+    background-color: var(--retro-paper);
+    color: var(--retro-ink);
+    border: 2px solid var(--wood-dark);
+    box-shadow: 2px 2px 0 var(--wood-shadow);
+    text-decoration: none;
+    transition: transform 0.05s ease;
   }
 
-  @keyframes bounce-gentle {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-6px);
-    }
+  /* Pressed effect */
+  .retro-button:hover {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 var(--wood-shadow);
   }
 
-  .animate-float {
-    animation: float 4s ease-in-out infinite;
+  .retro-button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0 0 0 var(--wood-shadow);
   }
+}
 
-  .animate-float-slow {
-    animation: float-slow 6s ease-in-out infinite;
+@keyframes pop {
+  from {
+    transform: scale(0.95);
   }
-
-  .animate-sparkle {
-    animation: sparkle 2.5s ease-in-out infinite;
-  }
-
-  .animate-bounce-gentle {
-    animation: bounce-gentle 3s ease-in-out infinite;
+  to {
+    transform: scale(1);
   }
 }
