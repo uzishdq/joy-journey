@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description: "The page you are looking for does not exist.",
 };
 
-export default function GlobalNotFound() {
+export default function NotFound() {
   return (
     <html lang="en" className={pixelFont.className}>
       <body className="min-h-screen flex flex-col items-center justify-center text-center px-4 gradient-sunset">
