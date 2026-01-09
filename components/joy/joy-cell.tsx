@@ -81,7 +81,6 @@ const JoyCell = ({
             "transition-all duration-300 ease-out",
             "group-hover:scale-110 group-active:scale-95",
             "animate-in fade-in zoom-in-50 duration-300",
-            // Optional: sedikit bayangan biar lebih pop
             value >= 7 ? "drop-shadow-sm" : ""
           )}
           aria-hidden="true"

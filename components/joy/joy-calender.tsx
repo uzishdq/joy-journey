@@ -87,17 +87,13 @@ const JoyCalendar = () => {
   return (
     <div className="relative z-10 w-full max-w-4xl mx-auto">
       {/* Header */}
-      <div className="text-center mb-6">
+      <div className="text-center mb-6 text-retro-ink">
         <div className="inline-flex items-center gap-2 mb-2">
-          <Sparkles className="w-6 h-6 text-primary" />
-          <h1 className="text-2xl font-extrabold text-foreground">
-            Joy Journey
-          </h1>
-          <Sparkles className="w-6 h-6 text-primary" />
+          <Sparkles className="w-6 h-6" />
+          <h1 className="text-2xl font-extrabold">Joy Journey</h1>
+          <Sparkles className="w-6 h-6" />
         </div>
-        <p className="text-sm text-muted-foreground">
-          Track your daily happiness
-        </p>
+        <p className="text-sm text-retro-paper">Track your daily happiness</p>
       </div>
 
       {/* Calendar Card */}
@@ -113,7 +109,7 @@ const JoyCalendar = () => {
             <ChevronLeft className="w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6" />
           </Button>
 
-          <h2 className="text-base md:text-lg lg:text-xl font-semibold text-center text-foreground">
+          <h2 className="text-base md:text-lg lg:text-xl font-semibold text-center">
             {getMonthName(month)} {year}
           </h2>
 
@@ -132,7 +128,7 @@ const JoyCalendar = () => {
           {WEEKDAYS.map((day) => (
             <div
               key={day}
-              className="text-center text-xs font-semibold text-muted-foreground py-1"
+              className="text-center text-xs font-semibold text-retro-paper py-1"
             >
               {day}
             </div>
@@ -156,9 +152,9 @@ const JoyCalendar = () => {
         {/* Stats */}
         {averageJoy && (
           <div className="mt-5 pt-4 border-t border-border text-center space-y-2">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-retro-paper">
               Average Joy:{" "}
-              <span className="font-bold text-primary">{averageJoy}</span>/10
+              <span className="font-bold text-retro-ink">{averageJoy}</span>/10
             </p>
             <p className="text-sm">({entries.length} days tracked)</p>
           </div>
@@ -171,7 +167,7 @@ const JoyCalendar = () => {
       {/* Edit Dialog */}
       <Dialog open={!!selectedDate} onOpenChange={() => setSelectedDate(null)}>
         <DialogContent className="sm:max-w-sm max-w-[95vw] p-6">
-          <DialogHeader className="pb-6">
+          <DialogHeader>
             <DialogTitle className="text-center text-xl sm:text-2xl font-bold tracking-tight">
               {selectedDate && format(selectedDate, "EEEE, MMMM d")}
             </DialogTitle>
@@ -182,7 +178,7 @@ const JoyCalendar = () => {
             )}
           </DialogHeader>
 
-          <div className="py-4">
+          <div className="py-2">
             <JoySlider value={tempValue} onChange={setTempValue} />
           </div>
 

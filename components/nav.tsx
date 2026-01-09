@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
-import { Button } from "./ui/8bit/button";
 import { ROUTES } from "@/lib/constant";
 
 export function Navbar() {
