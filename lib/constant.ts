@@ -8,6 +8,7 @@ export const ROUTES = {
   },
   PRIVATE: {
     INDEX: "/journeys",
+    PROFILE: "/journeys/profile",
   },
 };
 

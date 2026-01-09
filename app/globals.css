@@ -202,7 +202,6 @@
     border: 2px solid var(--wood-dark);
     box-shadow: 4px 4px 0 var(--wood-shadow);
     image-rendering: pixelated;
-    animation: pop 0.12s steps(2) forwards;
   }
 
   /* ===== Title ===== */
@@ -233,14 +232,5 @@
   .retro-button:active {
     transform: translate(2px, 2px);
     box-shadow: 0 0 0 var(--wood-shadow);
-  }
-}
-
-@keyframes pop {
-  from {
-    transform: scale(0.95);
-  }
-  to {
-    transform: scale(1);
   }
 }
