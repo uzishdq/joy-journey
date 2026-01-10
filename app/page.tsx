@@ -1,4 +1,5 @@
 import JoyCtaSection from "@/components/cta";
+import Footer from "@/components/footer";
 import HeroParallax from "@/components/hero";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <main className="min-h-screen">
       <HeroParallax />
       <JoyCtaSection />
+      <Footer />
     </main>
   );
 }

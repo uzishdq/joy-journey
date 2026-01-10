@@ -30,7 +30,7 @@ const JoyCalendar = () => {
   const [currentDate, setCurrentDate] = useState(
     new Date(today.getFullYear(), today.getMonth(), 1)
   );
-  // const [entries, setEntries] = useState<JoyEntry[]>([]);
+
   const [entries, setEntries] = useState<JoyEntry[]>(joyEntries);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [tempValue, setTempValue] = useState(5);
@@ -38,7 +38,6 @@ const JoyCalendar = () => {
   const year = currentDate.getFullYear();
   const month = currentDate.getMonth();
   const days = getDaysInMonth(year, month);
-
   const getEntryValue = (date: Date): number | undefined => {
     const key = formatDateKey(date);
     return entries.find((e) => e.date === key)?.value;
